@@ -34,6 +34,10 @@ Keras实现自定义循环神经网络需要：<br />
 1.实现自定义Cell，比如一个自定义的GRUCell，注意需要定义状态参数维度：self.state_size<br />
 2.将实现好的Cell作为参数cell传入Keras.layers.RNN()，让Keras自动推断每个时刻的传递过程<br /><br />
 
+Keras实现的GRU层有两种：<br />
+1. Keres.layers.GRU  非常慢，和我自定义的GRU层速度差不多<br />
+2. Keres.layers.CuDNNGRU 支持GPU加速，训练非常快，不过激活函数貌似无法更改，工程中推荐用这个<br /><br />
+
 数据集：<br />
 IMDB：影评数据集,训练集/测试集包含25000/25000条影评数据<br />
 链接：https://pan.baidu.com/s/18nX-2mqJzYU8XKQ5cfhxvw?pwd=52dl 提取码：52dl<br /><br />
