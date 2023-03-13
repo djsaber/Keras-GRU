@@ -29,7 +29,7 @@ GRU既然是LSTM的变体，因此也是可以解决RNN网络中的长依赖问�
 此外GRU相对于LSTM少了一个门函数，因此在参数的数量上也是要少于LSTM的，所以整体上GRU的训练速度要快于LSTM的。
 不过对于两个网络的好坏还是得看具体的应用场景。<br /><br />
 
-如同自定义实现简单GRU时所说，实现自己的自定义GRU：<br />
+如同自定义实现简单RNN时所说，实现自己的自定义GRU：<br />
 Keras实现自定义循环神经网络需要：<br />
 1.实现自定义Cell，比如一个自定义的GRUCell，注意需要定义状态参数维度：self.state_size<br />
 2.将实现好的Cell作为参数cell传入Keras.layers.RNN()，让Keras自动推断每个时刻的传递过程<br /><br />
